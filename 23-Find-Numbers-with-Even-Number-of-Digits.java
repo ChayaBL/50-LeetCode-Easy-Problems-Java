@@ -1,0 +1,12 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count = 0;
+        for (int num : nums) {
+            int digits = 0;
+            do { digits++; num /= 10; } while (num != 0);
+            if (digits % 2 == 0) count++;
+        }
+        return count;
+    }
+}
+// Time: O(n log M) | Space: O(1)
